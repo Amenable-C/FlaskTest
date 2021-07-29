@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>집 찾기</title>
+    <title>사진 업로드 하기</title>
     <style>
       /* cspell:disable-file */
       /* webkit printing magic: print all background colors */
@@ -730,17 +730,20 @@
     </style>
   </head>
   <body>
-    <article id="0d4c4905-1762-4686-a492-eb921380170b" class="page sans">
-      <header><h1 class="page-title">집 찾기</h1></header>
+    <article id="ed58f1e9-bf87-4146-8041-13a9ef99ff45" class="page sans">
+      <header><h1 class="page-title">사진 업로드 하기</h1></header>
       <div class="page-body">
-        <p id="4b044780-30ab-4c47-9fb6-d6fda6bad4f5" class="">
-          <a href="/apply">집 등록</a>
+        <p id="0e71aa14-8bf0-446d-946f-a440a5e374d2" class="">
+          사진 업로드하기
         </p>
-        <p id="768ed4d1-863a-4642-b638-46bde9c5dccc" class=""></p>
-        <p id="10b100b2-9a17-44c2-b51e-98594c864b55" class="">
-          <a href="/list">등록한 집 목록보기</a>
-        </p>
-        {{data}}
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+          action="{{url_for('upload_done')}}"
+        >
+          <input type="file" name="file" />
+          <input type="submit" />
+        </form>
       </div>
     </article>
   </body>
