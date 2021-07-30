@@ -32,8 +32,8 @@ def photo_apply():
 def upload_done():
     uploaded_files = request.files["file"]
     uploaded_files.save("static/img/{}.jpeg".format(1))
-    value = model.model.findingImage('testName')
-    data = {'check': value}
+    value = model.findingImage('testName') # testName 이게 예측된 값
+    data = {'check': value} # value가 예측된 값
     return render_template('hello.html', data=data)
 
 
